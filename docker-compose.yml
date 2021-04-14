@@ -16,6 +16,8 @@ services:
   chainlink:
     build: "chainlink/"
     restart: on-failure
+    ports:
+      - "6688:6688"
     depends_on:
       db:
         condition: service_healthy
